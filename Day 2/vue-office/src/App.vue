@@ -9,6 +9,7 @@
       </ul>
     </nav>
   </header>
+  <h1 class=" text-blue-700 m-2 p-2">Hello Tailwind</h1>
   <List />
 
 
