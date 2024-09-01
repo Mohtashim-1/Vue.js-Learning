@@ -7,7 +7,14 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
+import { computed, useSlots, watch } from 'vue';
+
+const slots = useSlots();
+
+// const children = slots.default()[0].children;
+
+// console.log(children);
+
 
 const statusToColor = {
     'Active'   : 'green',
@@ -27,7 +34,12 @@ const props = defineProps({
 })
 // const color = statusToColor[props.status]
 const color = computed(() => {
-    return statusToColor[props.status]
+    let children = slots.default()[0].children.trim();
+    // console.log(`h${children}h`)
+    return statusToColor[children]
 })
 
+watch(color,(value)=>{
+    console.log(value);
+})
 </script>

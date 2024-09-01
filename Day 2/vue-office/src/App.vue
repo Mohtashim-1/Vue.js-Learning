@@ -1,6 +1,7 @@
 <template>
   <div class="m-5">
-    <Badge status="Inactive" />
+    <!-- <Badge status="Pending" /> -->
+  <Badge status="Pending">Pending</Badge>
   </div>
 </template>
 
